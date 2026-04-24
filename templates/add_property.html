@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>List a Property</h1>
+
+{% if error %}
+<p style="color:red;">{{ error }}</p>
+{% endif %}
+
+{% if success %}
+<p style="color:green;">{{ success }}</p>
+{% endif %}
+
+<form action="/add-property" method="POST">
+    <input type="text" name="title" placeholder="Property Title" required>
+    <input type="text" name="area" placeholder="Area" required>
+    <input type="text" name="prop_type" placeholder="Type (Apartment, Villa...)" required>
+    <input type="number" name="price" placeholder="Price in EGP" required>
+    <input type="number" name="bedrooms" placeholder="Bedrooms" required>
+    <input type="number" name="bathrooms" placeholder="Bathrooms" required>
+    <button type="submit">Add Property</button>
+</form>
+
+{% endblock %}
