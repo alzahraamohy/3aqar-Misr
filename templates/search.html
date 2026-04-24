@@ -1,1 +1,29 @@
 <!--search page-->
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Search Results</h1>
+
+<form action="/search" method="GET">
+    <input type="text" name="area" value="{{ selected_area }}" placeholder="Area">
+    <input type="text" name="type" value="{{ selected_type }}" placeholder="Type">
+    <input type="number" name="max_price" value="{{ selected_price }}" placeholder="Max Price">
+    <button type="submit">Filter</button>
+</form>
+
+<p>{{ properties|length }} properties found</p>
+
+<div class="cards">
+    {% for prop in properties %}
+    <div class="card">
+        <img src="{{ prop.image_url }}" alt="{{ prop.title }}">
+        <h3>{{ prop.title }}</h3>
+        <p>{{ prop.get_summary() }}</p>
+        <a href="/property/{{ prop.prop_id }}">View Details</a>
+    </div>
+    {% else %}
+    <p>No properties match your search. Try different filters.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
