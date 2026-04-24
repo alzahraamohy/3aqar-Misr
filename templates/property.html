@@ -1,1 +1,17 @@
 <!--Single property detail-->
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ property.title }}</h1>
+<img src="{{ property.image_url }}" alt="{{ property.title }}">
+<p><strong>Area:</strong> {{ property.area }}</p>
+<p><strong>Type:</strong> {{ property.prop_type }}</p>
+<p><strong>Price:</strong> EGP {{ "{:,}".format(property.price) }}</p>
+<p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
+<p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+<p><strong>Listed:</strong> {{ property.listed_at }}</p>
+<p>{{ property.get_summary() }}</p>
+
+<a href="/search">← Back to Search</a>
+
+{% endblock %}
