@@ -73,24 +73,18 @@
     </div>
 </section>
 
-
-<form action="/search" method="GET">
-    <input type="text" name="area" placeholder="Area (e.g. New Cairo)">
-    <input type="text" name="type" placeholder="Type (e.g. Villa)">
-    <input type="number" name="max_price" placeholder="Max Price (EGP)">
-    <button type="submit">Search</button>
-</form>
-
-<h2>Featured Properties</h2>
-<div class="cards">
-    {% for prop in properties %}
-    <div class="card">
-        <img src="{{ prop.image_url }}" alt="{{ prop.title }}">
-        <h3>{{ prop.title }}</h3>
-        <p>{{ prop.get_summary() }}</p>
-        <a href="/property/{{ prop.prop_id }}">View Details</a>
+<!-- Area section-->
+<section class="area">
+    <div class="section_container">
+        <h2 class="section_title">Browse by Area</h2>
+        <div class="areas_grid">
+            <a class="area-chip" href="/search?area=New Cairo">New Cairo</a>
+            <a class="area-chip" href="/search?area=Sheikh Zayed">Sheikh Zayed</a>
+            <a class="area-chip" href="/search?area=Maadi">Maadi</a>
+            <a class="area-chip" href="/search?area=New Capital">New Capital</a>
+            <a class="area-chip" href="/search?area=6th of October">6th of October</a>
+        </div>
     </div>
-    {% endfor %}
-</div>
+</section>
 
 {% endblock %}
