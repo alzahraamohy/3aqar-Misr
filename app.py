@@ -42,7 +42,7 @@ def save_properties(properties):
 @app.route("/")
 def home():
     properties = load_properties()
-    # Show only the first 4 as featured (slicing a list)
+    # Show only the first 4 as featured
     featured = properties[:4]
     return render_template("index.html", properties=featured)
 
@@ -80,7 +80,6 @@ def search():
 # full details for each property
 @app.route("/property/<int:prop_id>")
 def property_detail(prop_id):
-    """Property detail page — shows full info for one property."""
     all_properties = load_properties()
     found = None
 
@@ -128,7 +127,7 @@ def add_property():
             prop_type=prop_type,
             bedrooms=bedrooms,
             bathrooms=bathrooms,
-            image_url="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400"
+            image_url="https://via.placeholder.com/400x300.png?text=No+Image"  # default image URL, will be fixed later
         )
 
         # Use a method on the object
