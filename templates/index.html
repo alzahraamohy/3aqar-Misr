@@ -40,9 +40,39 @@
                 </div>
             <button class="hero_btn" type="submit">Search Properties</button>
         </form>
-
     </div>
 </section>
+
+<!--Features section-->
+<section class = "features">
+     <div class="section_container">
+        <div class="section_header">
+            <h2 class="section_title">Featured Properties</h2>
+            <a class="section_link" href="/search">View all →</a>
+        </div>
+
+        <div class="cards">
+            {% for prop in properties %}
+            <a class="card" href="/property/{{ prop.prop_id }}">
+                <div class="card__image-wrap">
+                    <img class="card__image" src="{{ prop.image_url }}" alt="{{ prop.title }}">
+                    <span class="card__badge">{{ prop.prop_type }}</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">{{ prop.title }}</h3>
+                    <p class="card__area">{{ prop.area }}</p>
+                    <div class="card__meta">
+                        <span>{{ prop.bedrooms }} beds</span>
+                        <span>{{ prop.bathrooms }} baths</span>
+                    </div>
+                    <p class="card__price">EGP {{ "{:,}".format(prop.price) }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 
 <form action="/search" method="GET">
     <input type="text" name="area" placeholder="Area (e.g. New Cairo)">
