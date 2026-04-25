@@ -1,24 +1,71 @@
+<!--adding new property from the user-->
 {% extends "base.html" %}
 {% block content %}
 
-<h1>List a Property</h1>
+<section class="section">
+    <div class="form_page">
+        <h1 class="form_page_title">List a New Property</h1>
+        <p class="form_page_sub">Fill in the details below to add your listing</p>
 
-{% if error %}
-<p style="color:red;">{{ error }}</p>
-{% endif %}
+        <!-- Error message-->
+        <!--validation still needed-->
+        {% if error %}
+        <div class="alert_error">⚠️ {{ error }}</div>
+        {% endif %}
 
-{% if success %}
-<p style="color:green;">{{ success }}</p>
-{% endif %}
+        {% if success %}
+        <div class="alert_success">✅ {{ success }}</div>
+        {% endif %}
 
-<form action="/add-property" method="POST">
-    <input type="text" name="title" placeholder="Property Title" required>
-    <input type="text" name="area" placeholder="Area" required>
-    <input type="text" name="prop_type" placeholder="Type (Apartment, Villa...)" required>
-    <input type="number" name="price" placeholder="Price in EGP" required>
-    <input type="number" name="bedrooms" placeholder="Bedrooms" required>
-    <input type="number" name="bathrooms" placeholder="Bathrooms" required>
-    <button type="submit">Add Property</button>
-</form>
+        <!-- Text input sent to Python backend-->
+        <form class="property_form" action="/add-property" method="POST">
+
+            <div class="property_form_group">
+                <label class="property_form_label" for="title">Property Title</label>
+                <input class="property_form_input" id="title" type="text" name="title"
+                       placeholder="e.g. Modern Apartment in New Cairo" required>
+            </div>
+
+            <div class="property_form_row">
+                <div class="property_form_group">
+                    <label class="property_form_label" for="area">Area</label>
+                    <input class="property_form_input" id="area" type="text" name="area"
+                           placeholder="e.g. Maadi" required>
+                </div>
+                <div class="property_form_group">
+                    <label class="property_form_label" for="prop_type">Type</label>
+                    <select class="property_form_input" id="prop_type" name="prop_type" required>
+                        <option value="">Select type</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Villa">Villa</option>
+                        <option value="Townhouse">Townhouse</option>
+                        <option value="Penthouse">Penthouse</option>
+                        <option value="Studio">Studio</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="property_form_row">
+                <div class="property_form_group">
+                    <label class="property_form_label" for="price">Price (EGP)</label>
+                    <input class="property_form_input" id="price" type="number" name="price"
+                           placeholder="e.g. 3500000" min="0" required>
+                </div>
+                <div class="property_form_group">
+                    <label class="property_form_label" for="bedrooms">Bedrooms</label>
+                    <input class="property_form_input" id="bedrooms" type="number" name="bedrooms"
+                           placeholder="e.g. 3" min="0" required>
+                </div>
+                <div class="property_form_group">
+                    <label class="property_form_label" for="bathrooms">Bathrooms</label>
+                    <input class="property_form_input" id="bathrooms" type="number" name="bathrooms"
+                           placeholder="e.g. 2" min="0" required>
+                </div>
+            </div>
+
+            <button class="property_form_btn" type="submit">Add Listing</button>
+        </form>
+    </div>
+</section>
 
 {% endblock %}
