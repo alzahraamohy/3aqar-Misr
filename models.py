@@ -5,49 +5,44 @@
 from datetime import datetime
 
 class Property:
-    def __init__(self, id, title, area, description, prop_type, price, location, image_url, bedrooms, bathrooms, will_be_ready):
-        self.id = id
+    def __init__(self, prop_id, title, price, area, prop_type, bedrooms, bathrooms, image_url):
+        self.prop_id = prop_id
         self.title = title
-        self.area = area
-        self.description = description
-        self.prop_type = prop_type
         self.price = price
-        self.location = location
-        self.image_url = image_url
+        self.area = area
+        self.prop_type = prop_type
         self.bedrooms = bedrooms
         self.bathrooms = bathrooms
-        self.will_be_ready = will_be_ready
+        self.image_url = image_url
         self.listed_at = datetime.now().isoformat()
 
     def to_dict(self):
         # this step for converting the property list to a json format
         return {
-            'id': self.id,
+            'prop_id': self.prop_id,
             'title': self.title,
-            'area': self.area,
-            'description': self.description,
-            'prop_type': self.prop_type,
             'price': self.price,
-            'location': self.location,
-            'image_url': self.image_url,
+            'area': self.area,
+            'prop_type': self.prop_type,
             'bedrooms': self.bedrooms,
             'bathrooms': self.bathrooms,
-            'will_be_ready': self.will_be_ready,
+            'image_url': self.image_url,
             'listed_at': self.listed_at
         }
     
-    def propSummary(self):
+    def get_summary(self):
         # short summary of each property 
-        return f"{self.bedrooms} bed {self.bathrooms} bath in {self.area} for EGP {self.price:,} and will be ready by {self.will_be_ready}!"
+        return f"{self.bedrooms} bed {self.bathrooms} bath in {self.area} for EGP {self.price:,}!"
 
-    def matchFilters(self, filters):
+    def matches_filter(self, area=None, prop_type=None, max_price=None):
         # this function is used to filter the properties based on the user's search 
-        if filters.get('area') and self.area != filters['area']:
+        if area and self.area != area:
             return False
-        if filters.get('prop_type') and self.prop_type != filters['prop_type']:
+        if prop_type and self.prop_type != prop_type:
             return False
-        if filters.get('min_price') and self.price < filters['min_price']:
+        if max_price and self.price > max_price:
             return False
+        return True
         if filters.get('max_price') and self.price > filters['max_price']:
             return False
         if filters.get('bedrooms') and self.bedrooms != filters['bedrooms']:

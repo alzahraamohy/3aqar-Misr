@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "prop_id": 1,
         "title": "El Patio Riva - Premium Apartment",
         "area": "New Cairo",
         "description": "A modern premium apartment in the heart of New Cairo with luxury finishes.",
@@ -14,7 +14,7 @@
         "listed_at": "2026-04-23T08:30:00"
     },
     {
-        "id": 2,
+        "prop_id": 2,
         "title": "El Patio Jade - Luxury Villa",
         "area": "New Capital",
         "description": "Luxurious standalone villa in the New Administrative Capital with private garden.",
@@ -28,7 +28,7 @@
         "listed_at": "2026-04-23T08:35:00"
     },
     {
-        "id": 3,
+        "prop_id": 3,
         "title": "LA VISTA City - Modern Townhouse",
         "area": "New Capital",
         "description": "Modern townhouse featuring contemporary design and high-end amenities.",
@@ -42,7 +42,7 @@
         "listed_at": "2026-04-23T08:40:00"
     },
     {
-        "id": 4,
+        "prop_id": 4,
         "title": "El Patio Vera - Spacious Twinhouse",
         "area": "Sheikh Zayed",
         "description": "Spacious twinhouse located in a prime location in Sheikh Zayed City.",
@@ -56,7 +56,7 @@
         "listed_at": "2026-04-23T08:45:00"
     },
     {
-        "id": 5,
+        "prop_id": 5,
         "title": "LA VISTA Ray - Sea View Chalet",
         "area": "Ain Sokhna",
         "description": "Stunning chalet with a direct view of the Red Sea in Ain Sokhna.",
@@ -70,7 +70,7 @@
         "listed_at": "2026-04-23T08:50:00"
     },
     {
-        "id": 6,
+        "prop_id": 6,
         "title": "LA VISTA Gardens - Beachfront Villa",
         "area": "Ain Sokhna",
         "description": "Exclusive beachfront villa with private beach access and luxury facilities.",
@@ -84,7 +84,7 @@
         "listed_at": "2026-04-23T08:55:00"
     },
     {
-        "id": 7,
+        "prop_id": 7,
         "title": "El Patio Hills - Elegant Apartment",
         "area": "New Cairo",
         "description": "Elegant apartment with scenic views of the surrounding landscapes.",
@@ -98,7 +98,7 @@
         "listed_at": "2026-04-23T09:00:00"
     },
     {
-        "id": 8,
+        "prop_id": 8,
         "title": "Patio City - Central Apartment",
         "area": "New Capital",
         "description": "Centrally located apartment offering easy access to major city landmarks.",
@@ -112,7 +112,7 @@
         "listed_at": "2026-04-23T09:05:00"
     },
     {
-        "id": 9,
+        "prop_id": 9,
         "title": "El Patio Town - Modern Villa",
         "area": "New Cairo",
         "description": "Modern standalone villa designed for comfort and privacy in New Cairo.",
@@ -126,7 +126,7 @@
         "listed_at": "2026-04-23T09:10:00"
     },
     {
-        "id": 10,
+        "prop_id": 10,
         "title": "LA VISTA Ras El Hekma - North Coast Chalet",
         "area": "North Coast",
         "description": "Beautiful chalet in the heart of Ras El Hekma, perfect for summer vacations.",
@@ -140,7 +140,7 @@
         "listed_at": "2026-04-23T09:15:00"
     },
     {
-        "id": 11,
+        "prop_id": 11,
         "title": "El Patio Sola - Cozy Family House",
         "area": "Shorouk City",
         "description": "A cozy family house in a quiet neighborhood in Shorouk City.",

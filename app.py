@@ -91,7 +91,7 @@ def property_detail(prop_id):
 
     # If property doesn't exist, 404 page --> will be resolved later
     if not found:
-        return render_template("404.html"), 404
+        return render_template("error_page.html"), 404
 
     return render_template("property.html", property=found)
 
