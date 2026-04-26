@@ -74,14 +74,8 @@ img {
 }
 
 .navbar_logo {
-    display: inline-flex;
+    display: inline-flex; /* all elements in the same line */
     align-items: center;
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: -0.5px;
-    transition: opacity 0.2s;
 }
 
 .navbar_logo:hover {
@@ -114,12 +108,12 @@ img {
 
 /* The "List Property" button in the navbar */
 .navbar__cta {
-    background-color: var(--gold) !important;
-    color: var(--gray) !important;
+    background-color: var(--gold);
+    color: var(--gray);
     padding: 8px 20px;
     border-radius: 100px;
-    font-weight: 600 !important;
-    transition: transform 0.2s, box-shadow 0.2s !important;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .navbar__cta:hover {
