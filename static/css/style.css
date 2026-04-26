@@ -337,36 +337,6 @@ img {
     color: var(--green-main);
 }
 
-/* AREA CHIPS */
-.area {
-    padding: 48px 0 72px;
-    background: var(--cream-dark);
-}
-
-.area_grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
-}
-
-.area_chip {
-    padding: 10px 24px;
-    border: 2px solid var(--blue);
-    border-radius: 100px;
-    color: var(--gray);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.area_chip:hover {
-    background: var(--blue);
-    color: var(--white);
-    transform: translateY(-2px);
-}
-
-/* FILTER BAR (Search Page) */
 .filter_bar {
     display: flex;
     flex-wrap: wrap;
@@ -392,10 +362,6 @@ img {
     background: var(--cream);
     outline: none;
     transition: border-color 0.2s;
-}
-
-.filter_bar_input:focus {
-    border-color: var(--blue);
 }
 
 .filter_bar_btn {

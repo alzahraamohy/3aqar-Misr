@@ -2,8 +2,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="section section--search">
-    <div class="section__container">
+<section class="section_search">
+    <div class="section_container">
 
         <!-- Filter bar -->
         <form class="filter_bar" action="/search" method="GET">
@@ -30,7 +30,7 @@
                 placeholder="Max Price (EGP)"
                 min="0"
             >
-            <button class="filter_bar__btn" type="submit">Filter</button>
+            <button class="filter_bar_btn" type="submit">Filter</button>
             <a class="filter_bar_clear" href="/search">Clear</a>
         </form>
 
@@ -43,24 +43,24 @@
         <div class="cards_grid">
             {% for prop in properties %}
             <a class="card" href="/property/{{ prop.prop_id }}">
-                <div class="card__image-wrap">
-                    <img class="card__image" src="{{ prop.image_url }}" alt="{{ prop.title }}">
-                    <span class="card__badge">{{ prop.prop_type }}</span>
+                <div class="card_image_wrap">
+                    <img class="card_image" src="{{ prop.image_url }}" alt="{{ prop.title }}">
+                    <span class="card_badge">{{ prop.prop_type }}</span>
                 </div>
-                <div class="card__body">
-                    <h3 class="card__title">{{ prop.title }}</h3>
-                    <p class="card__area"> {{ prop.area }}</p>
-                    <div class="card__meta">
+                <div class="card_body">
+                    <h3 class="card_title">{{ prop.title }}</h3>
+                    <p class="card_area"> {{ prop.area }}</p>
+                    <div class="card_meta">
                         <span>{{ prop.bedrooms }} beds</span>
                         <span>{{ prop.bathrooms }} baths</span>
                     </div>
-                    <p class="card__price">EGP {{ "{:,}".format(prop.price) }}</p>
+                    <p class="card_price">EGP {{ "{:,}".format(prop.price) }}</p>
                 </div>
             </a>
             {% else %}
-            <div class="empty-state">
-                <p class="empty-state__text">No properties match your filters.</p>
-                <a class="empty-state__link" href="/search">Clear filters</a>
+            <div class="empty_state">
+                <p class="empty_state_text">No properties match your filters.</p>
+                <a class="empty_state_link" href="/search">Clear filters</a>
             </div>
             {% endfor %}
         </div>
