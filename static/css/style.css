@@ -107,16 +107,18 @@ img {
 }
 
 /* The "List Property" button in the navbar */
-.navbar__cta {
+.navbar_links .add_prop {
+    display: inline-block;
+    text-decoration: none;
     background-color: var(--gold);
-    color: var(--gray);
+    color: var(--white);
     padding: 8px 20px;
     border-radius: 100px;
     font-weight: 600;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.navbar__cta:hover {
+/* STILL NEED FIXINGGGGGGGG*/
+.navbar_links :hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 14px rgba(201,168,76,0.4);
 }
@@ -134,12 +136,11 @@ img {
     background-image: url('/static/photos/pg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;   /* Parallax scroll effect */
+    background-attachment: fixed;  
 }
 
 .hero_content {
     position: relative;       /* Sits above the overlay */
-    z-index: 1;
     max-width: 780px;
     padding: 0 24px;
 }
@@ -190,10 +191,6 @@ img {
     transition: box-shadow 0.2s;
 }
 
-.hero_input:focus {
-    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.5);
-}
-
 .hero_btn {
     height: 52px;
     padding: 0 36px;
@@ -213,15 +210,6 @@ img {
 .hero_btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(201,168,76,0.45);
-}
-
-/* SHARED SECTION WRAPPER*/
-.section {
-    padding: 64px 0;
-}
-
-.section_search {
-    padding-top: 40px;
 }
 
 .section_container {
@@ -254,18 +242,16 @@ img {
     color: var(--gold);
 }
 
-/* ============================================================
-   PROPERTY CARDS GRID
-   ============================================================ */
 .cards_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);   
     gap: 24px;
 }
 
-/* A single card — the <a> tag wrapping each property */
+/* A single card */
 .card {
     background: var(--white);
+    padding: 12px;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -316,8 +302,9 @@ img {
     padding: 6px 14px;
 }
 
+/* need to be fixed*/
 .card_body {
-    padding: 18px 20px 20px;
+    padding: 30px;
     text-align: center;
 }
 

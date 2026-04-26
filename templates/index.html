@@ -11,14 +11,14 @@
 
         <!--Search bar-->
         <form class="hero_form" action="/search" method="GET">
-            <div class="hero_inputs">
+            <div class="hero_inputs"> <!--MAKE IT DROPDOWN -->
                 <input
                     class="hero_input"
                     type="text"
                     name="area"
-                    placeholder="Area (e.g. New Cairo)" 
+                    placeholder="Area (e.g. New Cairo)"
                     autocomplete="off"
-                > <!--capitilization should be fixed later -->
+                > <!--capitilization should be fixed LATER -->
 
                 <select class="hero_input" name="type">
                     <option value="">Any Type</option>
@@ -52,18 +52,18 @@
         <div class="cards_grid">
             {% for prop in properties %}
             <a class="card" href="/property/{{ prop.prop_id }}">
-                <div class="card__image-wrap">
-                    <img class="card__image" src="{{ prop.image_url }}" alt="{{ prop.title }}">
-                    <span class="card__badge">{{ prop.prop_type }}</span>
+                <div class="card_image-wrap">
+                    <img class="card_image" src="{{ prop.image_url }}" alt="{{ prop.title }}">
+                    <span class="card_badge">{{ prop.prop_type }}</span>
                 </div>
-                <div class="card__body">
-                    <h3 class="card__title">{{ prop.title }}</h3>
-                    <p class="card__area">{{ prop.area }}</p>
-                    <div class="card__meta">
+                <div class="card_body">
+                    <h3 class="card_title">{{ prop.title }}</h3>
+                    <p class="card_area">{{ prop.area }}</p>
+                    <div class="card_meta">
                         <span>{{ prop.bedrooms }} bed</span>
                         <span>{{ prop.bathrooms }} bath</span>
                     </div>
-                    <p class="card__price">EGP {{ "{:,}".format(prop.price) }}</p>
+                    <p class="card_price">EGP {{ "{:,}".format(prop.price) }}</p>
                 </div>
             </a>
             {% endfor %}
