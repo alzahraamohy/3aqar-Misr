@@ -6,7 +6,7 @@ from models import Property
 
 app = Flask(__name__)
 
-DATA_FILE = "C:\\Users\\DELL\\Desktop\\Evista\\data\\properties.json"
+DATA_FILE = "data/properties.json"
 
 # Reads all properties from the JSON file and returns a list of objects
 def load_properties():
