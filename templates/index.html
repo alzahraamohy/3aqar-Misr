@@ -2,20 +2,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Discover Your Next Home</h1>
-
 <!--Hero section-->
 <section class = "hero">
     <div class = "hero_overlay"></div>
     <div class = "hero_content">
         <h1 class = "hero_title">Find Your Dream Home in Egypt</h1>
-        <p class="hero__subtitle">Thousands of properties across New Cairo, Sheikh Zayed, Maadi and beyond</p>
+        <p class="hero_subtitle">Thousands of properties across New Cairo, Sheikh Zayed, Maadi and beyond</p>
 
         <!--Search bar-->
         <form class="hero_form" action="/search" method="GET">
-            <div class="hero__inputs">
+            <div class="hero_inputs">
                 <input
-                    class="hero__input"
+                    class="hero_input"
                     type="text"
                     name="area"
                     placeholder="Area (e.g. New Cairo)" 
@@ -51,7 +49,7 @@
             <a class="section_link" href="/search">View all →</a>
         </div>
 
-        <div class="cards">
+        <div class="cards_grid">
             {% for prop in properties %}
             <a class="card" href="/property/{{ prop.prop_id }}">
                 <div class="card__image-wrap">
@@ -62,8 +60,8 @@
                     <h3 class="card__title">{{ prop.title }}</h3>
                     <p class="card__area">{{ prop.area }}</p>
                     <div class="card__meta">
-                        <span>{{ prop.bedrooms }} beds</span>
-                        <span>{{ prop.bathrooms }} baths</span>
+                        <span>{{ prop.bedrooms }} bed</span>
+                        <span>{{ prop.bathrooms }} bath</span>
                     </div>
                     <p class="card__price">EGP {{ "{:,}".format(prop.price) }}</p>
                 </div>
@@ -77,12 +75,12 @@
 <section class="area">
     <div class="section_container">
         <h2 class="section_title">Browse by Area</h2>
-        <div class="areas_grid">
-            <a class="area-chip" href="/search?area=New Cairo">New Cairo</a>
-            <a class="area-chip" href="/search?area=Sheikh Zayed">Sheikh Zayed</a>
-            <a class="area-chip" href="/search?area=Maadi">Maadi</a>
-            <a class="area-chip" href="/search?area=New Capital">New Capital</a>
-            <a class="area-chip" href="/search?area=6th of October">6th of October</a>
+        <div class="area_grid">
+            <a class="area_chip" href="/search?area=New Cairo">New Cairo</a>
+            <a class="area_chip" href="/search?area=Sheikh Zayed">Sheikh Zayed</a>
+            <a class="area_chip" href="/search?area=Maadi">Maadi</a>
+            <a class="area_chip" href="/search?area=New Capital">New Capital</a>
+            <a class="area_chip" href="/search?area=6th of October">6th of October</a>
         </div>
     </div>
 </section>

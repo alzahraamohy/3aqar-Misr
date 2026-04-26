@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3aqar Misr</title>
+    <title>AQAR MISR </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -13,7 +13,9 @@
 
     <nav class="navbar">
         <div class="navbar_container">
-            <a href="/" class="navbar_logo">3aqar Misr</a>
+            <a href="/" class="navbar_logo">
+            <img src="{{ url_for('static', filename='photos/logo.png') }}" alt="AQAR MISR" class="logo_img">
+        </a>
             <ul class="navbar_links">
                 <li><a href="/search">Browse</a></li>
                 <li><a href="/add-property" class="navbar__cta">List Property</a></li>
@@ -25,12 +27,14 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer class ="footer">
-        <div class="footer_container">
-            <p class="footer_brand">3aqar Misr</p>
-            <p class="footer_rights">© All rights reserved.</p>
-        </div>
-    </footer>
+    <footer class="footer">
+    <div class="footer_brand">
+        <img src="{{ url_for('static', filename='photos/logo.png') }}" 
+             alt="AQAR MISR - عقار مصر" 
+             class="logo_img">
+        <p class="footer_rights">© All rights reserved.</p>
+    </div>
+</footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>

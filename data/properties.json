@@ -7,7 +7,7 @@
         "prop_type": "Apartment",
         "bedrooms": 3,
         "bathrooms": 2,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\ElPatioRiva.png",
+        "image_url": "/static/photos/ElPatioRiva.png",
         "listed_at": "2026-04-23T08:30:00"
     },
     {
@@ -18,7 +18,7 @@
         "prop_type": "Villa",
         "bedrooms": 5,
         "bathrooms": 4,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\ElPatioJade.png",
+        "image_url": "/static/photos/ElPatioJade.png",
         "listed_at": "2026-04-23T08:35:00"
     },
     {
@@ -29,7 +29,7 @@
         "prop_type": "Townhouse",
         "bedrooms": 4,
         "bathrooms": 3,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\LAVISTACity.png",
+        "image_url": "/static/photos/LAVISTACity.png",
         "listed_at": "2026-04-23T08:40:00"
     },
     {
@@ -40,7 +40,7 @@
         "prop_type": "Twinhouse",
         "bedrooms": 4,
         "bathrooms": 3,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\ElPatioVera.png",
+        "image_url": "/static/photos/ElPatioVera.png",
         "listed_at": "2026-04-23T08:45:00"
     },
     {
@@ -51,7 +51,7 @@
         "prop_type": "Chalet",
         "bedrooms": 3,
         "bathrooms": 2,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\LAVISTARay.png",
+        "image_url": "/static/photos/LAVISTARay.png",
         "listed_at": "2026-04-23T08:50:00"
     },
     {
@@ -62,7 +62,7 @@
         "prop_type": "Villa",
         "bedrooms": 5,
         "bathrooms": 4,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\LAVISTAGardens.png",
+        "image_url": "/static/photos/LAVISTAGardens.png",
         "listed_at": "2026-04-23T08:55:00"
     },
     {
@@ -73,7 +73,7 @@
         "prop_type": "Apartment",
         "bedrooms": 2,
         "bathrooms": 2,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\ElPatioHills.png",
+        "image_url": "/static/photos/ElPatioHills.png",
         "listed_at": "2026-04-23T09:00:00"
     },
     {
@@ -84,7 +84,7 @@
         "prop_type": "Apartment",
         "bedrooms": 3,
         "bathrooms": 2,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\PatioCity.png",
+        "image_url": "/static/photos/PatioCity.png",
         "listed_at": "2026-04-23T09:05:00"
     },
     {
@@ -95,7 +95,7 @@
         "prop_type": "Villa",
         "bedrooms": 4,
         "bathrooms": 4,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\ElPatioTown.png",
+        "image_url": "/static/photos/ElPatioTown.png",
         "listed_at": "2026-04-23T09:10:00"
     },
     {
@@ -106,7 +106,7 @@
         "prop_type": "Chalet",
         "bedrooms": 3,
         "bathrooms": 2,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\LAVISTARasElHekma.png",
+        "image_url": "/static/photos/LAVISTARasElHekma.png",
         "listed_at": "2026-04-23T09:15:00"
     },
     {
@@ -117,7 +117,7 @@
         "prop_type": "Villa",
         "bedrooms": 3,
         "bathrooms": 2,
-        "image_url": "C:\\Users\\DELL\\Desktop\\Evista\\static\\photos\\ElPatioSola.png",
+        "image_url": "/static/photos/ElPatioSola.png",
         "listed_at": "2026-04-23T09:20:00"
     }
 ]

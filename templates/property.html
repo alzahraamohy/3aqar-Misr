@@ -9,47 +9,47 @@
         <a class="detail__back" href="/search">← Back to results</a>
 
         <!-- Hero image -->
-        <div class="detail_image_wrap">
-            <img class="detail_image" src="{{ property.image_url }}" alt="{{ property.title }}">
-            <span class="card_badge">{{ property.prop_type }}</span>
+        <div class="detail__image-wrap">
+            <img class="detail__image" src="{{ property.image_url }}" alt="{{ property.title }}">
+            <span class="card__badge">{{ property.prop_type }}</span>
         </div>
 
         <div class="detail_layout">
 
             <!-- Main info -->
-            <div class="detail__main">
-                <h1 class="detail__title">{{ property.title }}</h1>
-                <p class="detail__area">{{ property.area }}</p>
-                <p class="detail__price">EGP {{ "{:,}".format(property.price) }}</p>
+            <div class="detail_main">
+                <h1 class="detail_title">{{ property.title }}</h1>
+                <p class="detail_area">{{ property.area }}</p>
+                <p class="detail_price">EGP {{ "{:,}".format(property.price) }}</p>
 
-                <div class="detail__specs">
+                <div class="detail_specs">
                     <div class="spec-box">
-                        <span class="spec-box__icon"></span>
-                        <span class="spec-box__value">{{ property.bedrooms }}</span>
-                        <span class="spec-box__label">Bedrooms</span>
+                        <span class="spec_box_icon"></span>
+                        <span class="spec_box_value">{{ property.bedrooms }}</span>
+                        <span class="spec_box_label">Bedrooms</span>
                     </div>
                     <div class="spec-box">
-                        <span class="spec-box__icon"></span>
-                        <span class="spec-box__value">{{ property.bathrooms }}</span>
-                        <span class="spec-box__label">Bathrooms</span>
+                        <span class="spec_box_icon"></span>
+                        <span class="spec_box_value">{{ property.bathrooms }}</span>
+                        <span class="spec_box_label">Bathrooms</span>
                     </div>
-                    <div class="spec-box">
-                        <span class="spec-box__icon"></span>
-                        <span class="spec-box__value">{{ property.prop_type }}</span>
-                        <span class="spec-box__label">Type</span>
+                    <div class="spec_box">
+                        <span class="spec_box_icon"></span>
+                        <span class="spec_box_value">{{ property.prop_type }}</span>
+                        <span class="spec_box_label">Type</span>
                     </div>
                 </div>
 
-                <p class="detail__summary">{{ property.get_summary() }}</p>
-                <p class="detail__listed">Listed on: {{ property.listed_at[:10] }}</p>
+                <p class="detail_summary">{{ property.get_summary() }}</p>
+                <p class="detail_listed">Listed on: {{ property.listed_at[:10] }}</p>
             </div>
 
             <!-- Contact card -->
             <div class="detail_sidebar">
-                <div class="contact_card">
-                    <h3 class="contact_card_title">Interested in this property?</h3>
-                    <p class="contact_card_sub">Contact the agent for more details</p>
-                    <a class="contact_card_btn" href="/add-property">List Similar Property</a>
+                <div class="contact-card">
+                    <h3 class="contact-card__title">Interested in this property?</h3>
+                    <p class="contact-card__sub">Contact the agent for more details</p>
+                    <a class="contact-card__btn" href="/add-property">List Similar Property</a>
                 </div>
             </div>
 
