@@ -17,8 +17,8 @@
     --radius-sm:    6px;
     --radius-md:    12px;
     --radius-lg:    20px;
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body:    'DM Sans', sans-serif;
+    --font-display: 'Playfair Display';
+    --font-body:    'DM Sans'
 }
 
 /* flexiable borders - to skip the empty areas and unnessacry spaces*/
@@ -51,7 +51,7 @@ ul {
 }
 
 img {
-    display: block;
+    display: block; /* remove bottom gap */
     max-width: 100%;
 }
 
@@ -61,7 +61,6 @@ img {
     top: 0;
     z-index: 100;
     background-color: #ede8df;
-    /*box-shadow: var(--shadow-md);*/
 }
 
 .navbar_container {
